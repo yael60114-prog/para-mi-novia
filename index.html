@@ -3,107 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Mariana ❤️</title>
+
+<title>Para Mi Novia ❤️</title>
 
 <style>
-body{
+*{
 margin:0;
-background:#000;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(#ffdde1,#ee9ca7);
 font-family:Arial,sans-serif;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+overflow-x:hidden;
+text-align:center;
 color:white;
 }
 
-#slider{
-position:relative;
-width:90%;
-max-width:400px;
-height:80vh;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 0 30px red;
+h1{
+margin-top:40px;
+font-size:42px;
+animation:latido 1.5s infinite;
 }
 
-#slider img{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-animation:slide 45s infinite;
-}
-
-#mensaje{
-position:absolute;
-bottom:15px;
-left:10px;
-right:10px;
-background:rgba(0,0,0,.55);
-padding:15px;
-border-radius:15px;
+p{
 font-size:20px;
-text-align:center;
+margin:20px;
 }
 
-@keyframes slide{
-0%{opacity:0;}
-3%{opacity:1;}
-8%{opacity:1;}
-11%{opacity:0;}
-100%{opacity:0;}
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+padding:25px;
 }
 
-.rosa{
-position:absolute;
-top:-50px;
-font-size:28px;
+.galeria img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+transition:.4s;
+}
+
+.galeria img:hover{
+transform:scale(1.05);
+}
+
+.corazon{
+position:fixed;
+top:-20px;
+font-size:22px;
 animation:caer linear infinite;
+opacity:.8;
 }
 
 @keyframes caer{
-to{
-transform:translateY(110vh) rotate(360deg);
+0%{
+transform:translateY(-20px);
+}
+100%{
+transform:translateY(110vh);
 }
 }
 
-.hello{
-position:absolute;
-top:10px;
-right:10px;
-font-size:45px;
-animation:latir 2s infinite;
-}
-
-@keyframes latir{
+@keyframes latido{
 50%{
-transform:scale(1.2);
+transform:scale(1.1);
 }
+}
+
+.carta{
+background:white;
+color:#444;
+margin:30px;
+padding:25px;
+border-radius:20px;
+font-size:20px;
+line-height:1.6;
 }
 </style>
 
 </head>
+
 <body>
 
-<div class="hello">🎀</div>
+<h1>❤️ Para Ti Mi Amor ❤️</h1>
 
-<div id="slider">
+<p>
+Gracias por llegar a mi vida.<br>
+Cada momento contigo vale todo el mundo. ❤️
+</p>
 
-<img src="assets/IMG_5402.jpeg" style="animation-delay:0s">
-<img src="assets/IMG_6139.png" style="animation-delay:3s">
-<img src="assets/IMG_6145.png" style="animation-delay:6s">
+<div class="galeria">
 
-<div id="mensaje">
-🌹 Mariana ❤️<br><br>
-Aunque la distancia nos separe, mi corazón siempre está contigo.<br><br>
-Gracias por existir.<br><br>
-Feliz Día de la Novia. ❤️<br><br>
-Con amor,<br>
-Yael.
+<img src="assets/85bf5ae0-ff4f-41b6-9e19-c512de6c44b9.jpeg">
+
+<img src="assets/73a334af-b3ff-4299-8421-e2aaf6f27a53.jpeg">
+
+<img src="assets/IMG_5402.jpeg">
+
+<img src="assets/IMG_6139.png">
+
+<img src="assets/IMG_6145.png">
+
 </div>
+
+<div class="carta">
+
+<h2>💌</h2>
+
+<p>
+Te amo muchísimo.<br><br>
+
+Gracias por hacerme tan feliz, por cada sonrisa, por cada abrazo y por cada momento que compartimos.
+
+Espero que este sea solo uno de los muchos recuerdos hermosos que construiremos juntos.
+
+❤️ Siempre tú. ❤️
+
+</p>
 
 </div>
 
@@ -111,19 +130,19 @@ Yael.
 
 for(let i=0;i<40;i++){
 
-let r=document.createElement("div");
+let h=document.createElement("div");
 
-r.className="rosa";
+h.innerHTML="❤️";
 
-r.innerHTML="🌹";
+h.className="corazon";
 
-r.style.left=Math.random()*100+"vw";
+h.style.left=Math.random()*100+"vw";
 
-r.style.animationDuration=(5+Math.random()*6)+"s";
+h.style.animationDuration=(4+Math.random()*6)+"s";
 
-r.style.animationDelay=Math.random()*5+"s";
+h.style.fontSize=(15+Math.random()*20)+"px";
 
-document.body.appendChild(r);
+document.body.appendChild(h);
 
 }
 
