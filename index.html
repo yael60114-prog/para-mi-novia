@@ -1,120 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Mi Amor ❤️</title>
+<title>Para Ti ❤️</title>
 
 <style>
-
 body{
 margin:0;
-padding:0;
-background:linear-gradient(180deg,#ff4d6d,#ff8fab,#ffc2d1);
-height:100vh;
+background:#000;
+font-family:Arial,sans-serif;
 display:flex;
 justify-content:center;
 align-items:center;
-font-family:Arial,sans-serif;
+height:100vh;
 overflow:hidden;
 }
 
-.contenedor{
-text-align:center;
+video{
+position:fixed;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.carta{
+position:absolute;
+background:rgba(0,0,0,.55);
+padding:25px;
+border-radius:20px;
 color:white;
-padding:30px;
+text-align:center;
+max-width:330px;
+backdrop-filter:blur(5px);
 }
 
 h1{
-font-size:45px;
-margin-bottom:20px;
+color:#ff4d6d;
+font-size:32px;
+margin-bottom:10px;
 }
 
 p{
-font-size:22px;
+font-size:18px;
+line-height:1.6;
 }
 
 button{
-margin-top:30px;
-padding:15px 30px;
-font-size:20px;
+margin-top:20px;
+padding:12px 30px;
 border:none;
-border-radius:40px;
-background:white;
-color:#ff4d6d;
+border-radius:30px;
+background:#ff4d6d;
+color:white;
+font-size:18px;
 cursor:pointer;
-font-weight:bold;
 }
-
-.corazon{
-position:absolute;
-font-size:25px;
-animation:subir 6s linear infinite;
-}
-
-@keyframes subir{
-0%{
-transform:translateY(100vh);
-opacity:0;
-}
-100%{
-transform:translateY(-120vh);
-opacity:1;
-}
-}
-
 </style>
-
 </head>
 
 <body>
 
-<div class="contenedor">
+<video autoplay muted loop playsinline>
+<source src="video.mp4" type="video/mp4">
+</video>
 
-<h1>❤️ Feliz Día de la Novia ❤️</h1>
+<div class="carta">
+<h1>🐱🖤</h1>
 
 <p>
-Gracias por existir.
+Para la niña más bonita.<br><br>
+
+Cada segundo contigo vale más que cualquier cosa.
+No importa cuánto pase el tiempo, siempre habrá una razón para sonreír si estás tú.
 </p>
 
-<p>
-Aunque hoy estemos lejos,
-mi corazón siempre está contigo.
-</p>
-
-<button onclick="mensaje()">
-Presiona aquí ❤️
+<button onclick="alert('Te amo muchísimo ❤️🌹')">
+Tócame
 </button>
 
 </div>
-
-<script>
-
-function mensaje(){
-
-alert("Te amo muchísimo ❤️ Este solo es el comienzo de tu sorpresa.");
-
-}
-
-for(let i=0;i<35;i++){
-
-let c=document.createElement("div");
-
-c.innerHTML="❤️";
-
-c.className="corazon";
-
-c.style.left=Math.random()*100+"vw";
-
-c.style.animationDuration=(Math.random()*3+4)+"s";
-
-c.style.fontSize=(Math.random()*20+20)+"px";
-
-document.body.appendChild(c);
-
-}
-
-</script>
 
 </body>
 </html>
