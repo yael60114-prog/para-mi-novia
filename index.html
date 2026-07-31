@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mi Amor ❤️</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+background:linear-gradient(180deg,#ff4d6d,#ff8fab,#ffc2d1);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial,sans-serif;
+overflow:hidden;
+}
+
+.contenedor{
+text-align:center;
+color:white;
+padding:30px;
+}
+
+h1{
+font-size:45px;
+margin-bottom:20px;
+}
+
+p{
+font-size:22px;
+}
+
+button{
+margin-top:30px;
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:white;
+color:#ff4d6d;
+cursor:pointer;
+font-weight:bold;
+}
+
+.corazon{
+position:absolute;
+font-size:25px;
+animation:subir 6s linear infinite;
+}
+
+@keyframes subir{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+100%{
+transform:translateY(-120vh);
+opacity:1;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>❤️ Feliz Día de la Novia ❤️</h1>
+
+<p>
+Gracias por existir.
+</p>
+
+<p>
+Aunque hoy estemos lejos,
+mi corazón siempre está contigo.
+</p>
+
+<button onclick="mensaje()">
+Presiona aquí ❤️
+</button>
+
+</div>
+
+<script>
+
+function mensaje(){
+
+alert("Te amo muchísimo ❤️ Este solo es el comienzo de tu sorpresa.");
+
+}
+
+for(let i=0;i<35;i++){
+
+let c=document.createElement("div");
+
+c.innerHTML="❤️";
+
+c.className="corazon";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.animationDuration=(Math.random()*3+4)+"s";
+
+c.style.fontSize=(Math.random()*20+20)+"px";
+
+document.body.appendChild(c);
+
+}
+
+</script>
+
+</body>
+</html>
